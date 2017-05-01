@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- <html lang="en" ng-app="FitGenerator"> -->
+<html>
+<head>
+		<meta charset="UTF-8">
+	<title>Excercise Generator</title>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="/bower_components/angular-route/angular-route.min.js"></script>
+		<script src="/app.js"></script>
+</head>
+
+	<section ng-app="FitGenerator" ng-controller="excerciseController as excercise">
+		<h1>Fitness Randomizer</h1>
+
+	<div>
+		{{excercise.info.bodyArea}}
+	<div>
+		{{excercise.info.name}}
+	</div>
+	<div>
+		Reps: {{excercise.info.reps}}
+	<button ng-click="excercise.pick()">Generate Excercise</button>
+	<!-- <button ng-click="save()"></button> Save to workout list -->
+	</div>
+</section>
+</div
+</html>

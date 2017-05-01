@@ -2,8 +2,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ExcerciseSchema = new Schema({
-		Section: String,
-		Reps: 	String
+		bodyArea: 	String,
+		name: 		String,
+		sets: 		String,
+		reps: 		String
 });
 
 var Excercise = mongoose.model('Excercise', ExcerciseSchema);

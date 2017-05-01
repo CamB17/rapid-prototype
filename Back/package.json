@@ -1,0 +1,25 @@
+{
+  "name": "rapid-prototype",
+  "version": "1.0.0",
+  "description": "![house](https://cloud.githubusercontent.com/assets/7833470/12465814/e9ae781e-bf84-11e5-8de0-6a1d952e5fda.gif)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamB17/rapid-prototype.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+    "dependencies": {
+    "express": "^4.15.2",
+    "body-parser": "^1.15.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.9.6"
+  },
+  "homepage": "https://github.com/CamB17/rapid-prototype#readme"
+}
+
