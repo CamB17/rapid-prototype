@@ -1,13 +1,15 @@
+var express = require('express'),
+	app = express();
 
-var app = angular.module('FitGenerator', []);
-	app.controller('excerciseController', function() {
-		this.info = excercises[Math.floor(Math.random()*excercises.length)];
-		this.pick = function(){
-		this.info = excercises[Math.floor(Math.random()*excercises.length)];
-		};
-	});
+var request = require('request');
+var bodyParser = require('body-parser');
 
-var excercises = [
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+var db = require('./models');
+
+var excerciseList = [
 {
 	bodyArea: "Triceps",
 		name: "Cable Pushdowns",
@@ -34,14 +36,14 @@ var excercises = [
 		name: "Leg Press",
 		sets: 4,
 		reps: 16,
-		picture: String 
+		picture: "http://s-media-cache-ak0.pinimg.com/originals/d4/af/f3/d4aff3aad1da44c3ac660e61ec5b3710.jpg" 
 },
 {
 	bodyArea: 	"Legs",
 		name: 	"Lying Leg Curls",
 		sets: 	4,
 		reps: 	16,
-		picture: String
+		picture: "http://weighttraining.guide/wp-content/uploads/2016/10/lying-leg-curl.png"
 },
 {
 	bodyArea: "Back",
@@ -80,5 +82,19 @@ var excercises = [
 }
 
 ];
+
+db.Excercise.remove({}, function(err, excercises){
+	if(err) {
+		console.log('error occurred in remove', err);
+	} else {
+		console.log('removed all excercises');
+	}
+});
+
+db.Excercise.create(excerciseList, function(err, excercises){
+	if (err) { return console.log('err', err); }
+	console.log("created", excerciseList.length, "excercises");
+	process.exit();
+});
 
 
