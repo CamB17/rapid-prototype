@@ -16,15 +16,29 @@ body {
 }
 
 .card{
-	background-color: #355c7d;
+	background-color: #547a82;
 	border-radius: 5px;
 	color: black;
 }
 
 .card button{
-	color: #c06c84;
+	color: #black;
+	border-radius: 5px;
+	background-color: white;
 }
 
 .card-block {
 	max-width: 500px;
+}
+.container  {
+  display: flex;
+  position: absolute;
+  top: 90px;
+  left: 520px;
+  height: 55%;
+  width: 100%;
+}
+
+.container .row {
+  margin: 0 auto;
 }

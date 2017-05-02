@@ -30,7 +30,7 @@ var exercises = [
 		name: "Dumbell Chest Flys",
 		sets: 4,
 		reps: 16,
-		picture: "http://www.2createabody.com/images/incline_dumbbell_flys.jpeg" 
+		picture: "http://www.fitnessandpower.com/wp-content/uploads/2017/01/dumbbell-flyes.jpg" 
 },
 {
 	bodyArea: "Legs",

@@ -9,12 +9,13 @@
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="/bower_components/angular-route/angular-route.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="scripts/controllers/exercisesController.js"></script>
+		<!--<script src="scripts/controllers/exercisesController.js"></script>-->
 		<script src="/app.js"></script>
 </head>
 	<body ng-app="FitGenerator">
 		<section ng-controller="ExercisesController as exercise">
 			<ng-view></ng-view>
+	<div class="container">
 		<div class="card text-center" style="width: 30rem;">
 			<h1>Fitness Randomizer</h1>
 		<!-- Where exercises will display -->
@@ -28,6 +29,7 @@
 	<!-- <button value="Save">Save this exercise</button> Save to workout list -->
 		</div>
 		</section>
+	</div>
 	</div>
 	</div>
 	</body>
