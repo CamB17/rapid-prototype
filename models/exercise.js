@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var ExcerciseSchema = new Schema({
+var ExerciseSchema = new Schema({
 		bodyArea: 	String,
 		name: 		String,
 		sets: 		String,
@@ -9,5 +9,5 @@ var ExcerciseSchema = new Schema({
 		picture: String
 });
 
-var Excercise = mongoose.model('Excercise', ExcerciseSchema);
-module.exports = Excercise;
+var Exercise = mongoose.model('Exercise', ExerciseSchema);
+module.exports = Exercise;

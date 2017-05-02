@@ -9,7 +9,8 @@ app.use(bodyParser.json());
 
 var db = require('./models');
 
-var excerciseList = [
+//Exercises Here
+var exercises = [
 {
 	bodyArea: "Triceps",
 		name: "Cable Pushdowns",
@@ -36,7 +37,7 @@ var excerciseList = [
 		name: "Leg Press",
 		sets: 4,
 		reps: 16,
-		picture: "http://s-media-cache-ak0.pinimg.com/originals/d4/af/f3/d4aff3aad1da44c3ac660e61ec5b3710.jpg" 
+		picture: "https://s-media-cache-ak0.pinimg.com/736x/c0/5b/a3/c05ba3e500bba44d068d869650428d86.jpg" 
 },
 {
 	bodyArea: 	"Legs",
@@ -50,40 +51,40 @@ var excerciseList = [
 		name: "Barbell Deadlifts",
 		sets: 3,
 		reps: 12,
-		picture: String
+		picture: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRqO3H3xYA_8SOfhhvQGaQwi7hj8LX6_egkllmtk4jNffzXPqWqNQ"
 },
 {
 	bodyArea: "Back",
 		name: "Lat Pulldowns",
 		sets: 4,
 		reps: 16,
-		picture: String
+		picture: "http://bodybuilding-wizard.com/wp-content/uploads/2014/03/wide-grip-lat-pulldown-exercise-7-1-1.jpg"
 },
 {
 	bodyArea: "Back",
 		name: "Bent Over Barbell Row",
 		sets: 4,
 		reps: 12,
-		picture: String
+		picture: "http://nutribody.com/wp-content/uploads/2015/11/THICKEN-UPPER-AND-MIDDLE-BACK-ins1.jpg"
 },
 {
 	bodyArea: "Shoulders",
 		name: "Over head Press",
 		sets: 4,
 		reps: 16,
-		picture: String
+		picture: "https://www.bodybuildertime.com/wp-content/uploads/2016/02/barbell-shoulder-press.png"
 },
 {
 	bodyArea: "Biceps",
 		name: "Incline Dumbell Curls",
 		sets: 4,
 		reps: 12,
-		picture: String
+		picture: "http://www.burnthefatinnercircle.com/members/images/1592c.jpg?cb=20170321111837"
 }
 
 ];
 
-db.Excercise.remove({}, function(err, excercises){
+db.Exercise.remove({}, function(err, exercises){
 	if(err) {
 		console.log('error occurred in remove', err);
 	} else {
@@ -91,10 +92,10 @@ db.Excercise.remove({}, function(err, excercises){
 	}
 });
 
-db.Excercise.create(excerciseList, function(err, excercises){
-	if (err) { return console.log('err', err); }
-	console.log("created", excerciseList.length, "excercises");
-	process.exit();
+	db.Exercise.create(exercises, function(err, exercises){
+		if (err) { return console.log('err', err); }
+		console.log("created", exercises.length, "exercises");
+		process.exit();
 });
 
 

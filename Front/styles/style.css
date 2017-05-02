@@ -1,0 +1,30 @@
+body {
+	max-width: 400px;
+}
+.card h1 {
+  font-family: "Chewy", Sniglet, Helvetica, sans-serif;
+  font-size: 22px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 0.618rem;
+}
+
+/*Resize Giant images*/
+.card img {
+	height: 200px;
+	width: 300px;
+}
+
+.card{
+	background-color: #355c7d;
+	border-radius: 5px;
+	color: black;
+}
+
+.card button{
+	color: #c06c84;
+}
+
+.card-block {
+	max-width: 500px;
+}

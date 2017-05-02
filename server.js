@@ -1,7 +1,8 @@
 var express 	= require('express');
 var app    		= express();
 var bodyParser 	= require('body-parser');
-var mongoose = require('mongoose');
+var mongoose 	= require('mongoose');
+
 
 var port = process.env.PORT || 3000;
 
@@ -10,21 +11,29 @@ var db = require('./models');
 ///////////////////
 //	Public views //
 //////////////////
+//Fixes XML error
+// app.use(function(req, res, next) {
+// 	res.header('Access-Control-Allow-Origin', "*");
+// 	res.header('Access-Control-Allow-Methods', "GET,PUT,POST,DELETE");
+// 	res.header('Access-Control-Allow-Headers', 'Content-Type');
+// 	next();
+// });
+
 app.use(express.static(__dirname + '/front/'));
 
 app.get('/', function index(req, res){
-	db.Excercise.find(__dirname + '/front/index.html');
+	db.Exercise.find(__dirname + '/front/index.html');
 });
 
-app.get('/excercises', function show(req, res){
-	db.Excercise.find({}, function(err, excercises){
-		res.json(excercises);
+app.get('/exercises', function show(req, res){
+	db.Exercise.find({}, function(err, exercises){
+		res.json(exercises);
 	});
 });
 
-app.get('/excercises/:id', function show(req, res){
-	db.Excercise.findById({id: req.params.id}, function(err, excercise){
-		res.json(excercise);
+app.get('/exercises/:id', function show(req, res){
+	db.Exercise.findById({id: req.params.id}, function(err, exercise){
+		res.json(exercise);
 	});
 });
 

@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost/FitGenerator");
+	mongoose.connect("mongodb://localhost/FitGenerator");
 
 
-module.exports.Excercise = require("./excercise.js");
+module.exports.Exercise = require("./exercise.js");

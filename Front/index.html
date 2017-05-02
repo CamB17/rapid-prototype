@@ -5,28 +5,30 @@
 	<meta charset="UTF-8">
 	<title>Excercise Generator</title>
 		<!-- Links -->
+		<link rel="stylesheet" href="styles/style.css">
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="/bower_components/angular-route/angular-route.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="scripts/controllers/excercisesController.js"></script>
+		<script src="scripts/controllers/exercisesController.js"></script>
 		<script src="/app.js"></script>
 </head>
 	<body ng-app="FitGenerator">
-	<section ng-controller="excerciseController as excercise">
+	<section ng-controller="ExercisesController as exercise">
 	<ng-view></ng-view>
+<div class="card text-center" style="width: 30rem;">
 		<h1>Fitness Randomizer</h1>
-<div class="card card-inverse card-info text-center" style="width: 30rem;">
+		<!-- Where exercises will display -->
 		<div class="card-block">
-			<img src="{{excercise.info.picture}}">
-			<h4 class 	="card-title">{{excercise.info.bodyArea}}</h4>
-			<p class	="card-text">{{excercise.info.name}}</p>
-			<p class	="card-text">Reps: {{excercise.info.reps}}</p>
-			<p class	="card-text">Sets: {{excercise.info.sets}}</p>
-	<button ng-click	="excercise.pick()">Generate Excercise</button>
-	<!-- <button ng-click="save()"></button> Save to workout list -->
-	</div>
+			<img src="{{exercise.info.picture}}">
+			<h4 class 	="card-title">{{exercise.info.bodyArea}}</h4>
+			<p class	="card-text">{{exercise.info.name}}</p>
+			<p class	="card-text">Reps: {{exercise.info.reps}}</p>
+			<p class	="card-text">Sets: {{exercise.info.sets}}</p>
+	<button ng-click="exercise.pick()">Generate Exercise</button>
+	<!-- <button value="Save">Save this exercise</button> Save to workout list -->
 	</div>
 </section>
+</div>
 </div>
 </body>
 </html>
