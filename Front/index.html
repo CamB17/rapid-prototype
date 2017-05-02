@@ -2,25 +2,26 @@
 <!-- <html lang="en" ng-app="FitGenerator"> -->
 <html>
 <head>
-		<meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<title>Excercise Generator</title>
+		<!-- Links -->
 		<script src="bower_components/angular/angular.js"></script>
 		<script src="/bower_components/angular-route/angular-route.min.js"></script>
 		<script src="/app.js"></script>
 </head>
-
 	<section ng-app="FitGenerator" ng-controller="excerciseController as excercise">
 		<h1>Fitness Randomizer</h1>
 
-	<div>
-		{{excercise.info.bodyArea}}
-	<div>
-		{{excercise.info.name}}
-	</div>
-	<div>
-		Reps: {{excercise.info.reps}}
+<div class="card card-inverse card-info text-center" style="width: 30rem;">
+		<div class="card-block">
+			<img src="">
+			<h4 class ="card-title">{{excercise.info.bodyArea}}</h4>
+			<p class="card-text">{{excercise.info.name}}</p>
+			<p class="card-text">Reps: {{excercise.info.reps}}</p>
+			<p class="card-text">Sets: {{excercise.info.sets}}</p>
 	<button ng-click="excercise.pick()">Generate Excercise</button>
 	<!-- <button ng-click="save()"></button> Save to workout list -->
+	</div>
 	</div>
 </section>
 </div

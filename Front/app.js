@@ -1,3 +1,4 @@
+
 var app = angular.module('FitGenerator', []);
 	app.controller('excerciseController', function() {
 		this.info = excercises[Math.floor(Math.random()*excercises.length)];
@@ -15,16 +16,17 @@ var excercises = [
 },
 {
 	bodyArea: "Biceps",
-	name: "Hammer Curl",
+	name: "Hammer Curls",
 	sets: 3,
 	reps: 15 
 },
 {
 	bodyArea: "Chest",
 	name: "Cable Flys",
-	sets: 3,
-	reps: 12 
+	sets: 4,
+	reps: 16 
 }
 
 ];
+
 
