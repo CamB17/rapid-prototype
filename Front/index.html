@@ -13,10 +13,10 @@
 		<script src="/app.js"></script>
 </head>
 	<body ng-app="FitGenerator">
-	<section ng-controller="ExercisesController as exercise">
-	<ng-view></ng-view>
-<div class="card text-center" style="width: 30rem;">
-		<h1>Fitness Randomizer</h1>
+		<section ng-controller="ExercisesController as exercise">
+			<ng-view></ng-view>
+		<div class="card text-center" style="width: 30rem;">
+			<h1>Fitness Randomizer</h1>
 		<!-- Where exercises will display -->
 		<div class="card-block">
 			<img src="{{exercise.info.picture}}">
@@ -24,11 +24,11 @@
 			<p class	="card-text">{{exercise.info.name}}</p>
 			<p class	="card-text">Reps: {{exercise.info.reps}}</p>
 			<p class	="card-text">Sets: {{exercise.info.sets}}</p>
-	<button ng-click="exercise.pick()">Generate Exercise</button>
+		<button ng-click	="exercise.pick()">Generate Exercise</button>
 	<!-- <button value="Save">Save this exercise</button> Save to workout list -->
+		</div>
+		</section>
 	</div>
-</section>
-</div>
-</div>
-</body>
+	</div>
+	</body>
 </html>
